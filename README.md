@@ -81,6 +81,24 @@ Hooks allows you run blocks of code before and after scenarios.They setup precon
 
 @After
 
+### 10. What is background in Cucumber?
+Background is a step that is executed before each scenario and is common all the scenarios.
+
+### 11. What are Data Tables in Cucumber?
+Datatables are used to pass list of values to cucumber step definitions.
+
+```java
+    @And("user select drop down value with$")
+    public void userSelectDropDownValueWith(DataTable datatable) throws Exception {
+        List<Map<String, String>> ffElements = datatable.asMaps(String.class, String.class);
+        for(Map<String, String> ffElement : ffElements){
+            selectDropDownPage.selectDropDownValue(ffElement.get("value"));
+        }
+    }
+```
+
+
+
 
 
 
