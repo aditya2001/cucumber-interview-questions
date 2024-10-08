@@ -97,7 +97,22 @@ Datatables are used to pass list of values to cucumber step definitions.
     }
 ```
 
+### 12. @CucumberOptions annotation in runner file?
+The Options tag helps create a link between the feature files and the step definition files, with each feature file connecting to a corresponding step definition file.
 
+```java
+@CucumberOptions(
+        tags = "not @ignore",
+        plugin = {"pretty",
+                "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
+                "timeline:test-output-thread/",
+                "rerun:target/failedrerun.txt"
+        },
+        monochrome = true,
+        glue = { "stepdefs" },
+        features = { "src/test/resources/features" }
+)
+```
 
 
 
