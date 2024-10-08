@@ -76,7 +76,9 @@ We provide the placeholders in scenario and during execution cucumber will repla
 
 ### 9. What are Hooks in Cucumber?
 Hooks allows you run blocks of code before and after scenarios.They setup precondition and clean up after test execution.
+
 @Before
+
 @After
 
 
